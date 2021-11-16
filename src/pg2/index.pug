@@ -1,0 +1,26 @@
+p oh hi
+
+include ../_includes/_inc
+
+script(type='module').
+
+    import { Logger } from '../globalAssets/logger.js'
+    new Logger(2000)
+    console.log('a', 'b')
+
+    function checkLog() {
+        //Console
+        console.log('Hello, from console.log');
+        console.error('Hello, from console.error');
+        console.info('Hello, from console.info');
+        console.error({
+            'type': 'test',
+            'test': 'Add to cart failed with the following error:  has expired',
+        })
+
+        //Client Side Uncaught Exception
+        throw new Error('Uncaught Error')
+    }
+
+    //checkLog()
+    

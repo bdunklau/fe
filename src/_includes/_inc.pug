@@ -1,0 +1,29 @@
+
+
+button(onclick='onClick()') Get
+
+#target blank
+
+script().
+    function onClick() {
+        console.log('clicked')
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json())
+            .then(json => {
+                    console.log(json)
+                    renderHello() // but not using the json
+                })
+    }
+
+    function renderHello() {
+        console.log('rendering')
+        var temp = " Hello {{ name }}!"
+        console.log(temp)
+        var ren = Mustache.render(temp, { name: 'Luke' })
+        console.log(ren)
+        document.getElementById('target').innerHTML = ren
+    }
+
+script(src='//cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js')
+
+// or instead of mustache use http://listjs.com

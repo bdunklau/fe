@@ -1,0 +1,21 @@
+{
+  "name": "my-app",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=14.18.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "clean":"rm -rf public",
+    "build": "eleventy --passthroughall",
+    "dev": "eleventy --serve --passthroughall"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "js-yaml": "^4.1.0"
+  },
+  "//": " "
+}
